@@ -1,0 +1,39 @@
+Trabalho de Estruturas de Dados 1
+ Escrito por Diego Rubin. RA 207000706
+ Compilador usado para teste: FreePascal 2.0.4
+ Plataforma: Linux 2.6 Fedora 7(Moonshine)
+
+Este aplicativo tem como propósito a implementação
+de um procedimento de remoção de elementos de uma árvore binária 
+de busca, deixando no lugar do elemento, o seu antecessor in-ordem, 
+como especifado em aula pelo Prof. Dr. Carlos Norberto Fischer.
+
+Este aplicativo e composto por quatro arquivos principais:
+- unit_arvorebin.pas - Neste arquivo esta a implementação da árvore e suas funções,
+			este é o arquivo principal do projeto.
+- arvorebin.pas - Neste arquivo encontra-se as chamadas da unit da árvore. O
+		programa principal recebe as informações externas através de 
+		arquivos texto, e assim também passa as informações para fora.
+- arvore.rb - Este script escrito em ruby cria uma interface grafica, usando o gtk,
+		para facilitar a visualização da árvore.
+- arvore.glade - Neste arquivo xml, contém as intruções para o script em ruby de como
+		deve ser montado a interface.
+
+Dependencias:
+	Para executar o "front-end" do aplicativo, e necessario tem instalado os arquivos 
+	de desenvolvimento do gtk e glade para ruby. E inclusive o interpretador ruby deve
+	estar funcionando.
+	Outro aplicativo importante para o bom funcionamento do script é o graphviz. É este
+	aplicativo que monta o desenho da árvore.
+
+	Para instalar essas dependencias no Fedora, os seguinte comando ja é suficiente.
+
+	# yum install -y ruby-gtk2-devel ruby-libglade2 graphviz
+	
+	Com este comando será instalado estes arquivos e suas dependencias.
+
+Para executa-lo:
+
+	$ ruby arvore.rb
+
+Para baixar o código fonte des aplicativo, segue-se o link: http://www.mediafire.com/?4qlv02wcttl
