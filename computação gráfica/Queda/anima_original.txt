@@ -1,0 +1,38 @@
+if(!subindo)
+	{
+
+		altura = Velocidade + (1/2)*g;	//gets distance
+
+		Velocidade = Velocidade + g;	//update velocity
+		posicao_bolinha-=(int)(altura/100);	//update y coord          //// no original tava 10 no lugar de 1000*******
+		if((posicao_bolinha)<=0)	//if ball hit floor
+		{
+		/*
+			//				flatten=true;	//for painting
+			subindo = true;	//set to go up now
+			altura = posicao_bolinha - 7;			//update distance
+			//this is more of the major part of the formula
+			Velocidade = sqrt((Velocidade*Velocidade)-2*g*altura);	//i stink at math
+
+			temp = Velocidade * (bounce/100); //calculate the new velocity because of collision
+			Velocidade-=temp;
+			posicao_bolinha = 7;	//if ball went below
+			*/
+		}
+	}
+	//if ball is bouncing up
+	else
+	{
+		if(Velocidade<=0)	//if velocity is 0 then ball stopped, must go back down
+		{
+			subindo = false;
+			Velocidade=0;	//just in case it was -#
+		}
+		else	//still has energy to go up
+		{
+			altura = Velocidade + (1/2)*g;
+			Velocidade-=g;		//update velocity
+			posicao_bolinha+=(int)(altura/100);	//update ball y
+		}
+
+	}
